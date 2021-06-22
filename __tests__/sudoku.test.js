@@ -11,8 +11,13 @@ describe('Sudoku', () => {
     const testSudoku = new Sudoku([2, 4, 6, 7], [3, 5, 7, 44]);
     expect(testSudoku.checkInt()).toEqual("Nice try!!! NOT ALLOWED");
   });
-test('should check if there is duplicates in array', () => {
+test('should check if there is duplicates in row', () => {
 const testRow = new Sudoku([1,2,3,4],[4,5,6,7]);
-expect(testRow.checkRow()).toEqual("Good!");
+expect(testRow.checkRow()).toEqual("Good ROW!");
+});
+test('should check if there is duplicates in column', () => {
+  const testColumn = new Sudoku([1,2,3,4],[4,5,6,6]);
+  expect(testColumn.checkColumn()).toEqual("Duplicate!");
+
 });
 });

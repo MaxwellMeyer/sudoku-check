@@ -31,7 +31,26 @@ if (result) {
  return "Duplicate!";
 
 } else {
-return "Good!";
+return "Good ROW!";
 }
+}
+
+Sudoku.prototype.checkColumn = function () {
+  const columnArr = this.column;
+  let result =false;
+  
+  for(let i=0; i<columnArr.length; i++){
+  if (columnArr.indexOf(columnArr[i]) !== columnArr.lastIndexOf(columnArr[i])) {
+    result = true;
+    break;
+  
+  }
+  }
+  if (result) {
+   return "Duplicate!";
+  
+  } else {
+  return "Good COLUMN!";
+  }
 }
 
