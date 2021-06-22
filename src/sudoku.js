@@ -15,5 +15,23 @@ Sudoku.prototype.checkInt = function() {
       return "Nice try!!! NOT ALLOWED";
     }
   }
-};
+}
+Sudoku.prototype.checkRow = function () {
+const rowArr = this.row;
+let result =false;
+
+for(let i=0; i<rowArr.length; i++){
+if (rowArr.indexOf(rowArr[i]) !== rowArr.lastIndexOf(rowArr[i])) {
+  result = true;
+  break;
+
+}
+}
+if (result) {
+ return "Duplicate!";
+
+} else {
+return "Good!";
+}
+}
 

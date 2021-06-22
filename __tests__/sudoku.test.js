@@ -11,4 +11,8 @@ describe('Sudoku', () => {
     const testSudoku = new Sudoku([2, 4, 6, 7], [3, 5, 7, 44]);
     expect(testSudoku.checkInt()).toEqual("Nice try!!! NOT ALLOWED");
   });
+test('should check if there is duplicates in array', () => {
+const testRow = new Sudoku([1,2,3,4],[4,5,6,7]);
+expect(testRow.checkRow()).toEqual("Good!");
+});
 });
